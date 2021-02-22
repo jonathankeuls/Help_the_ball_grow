@@ -3,24 +3,34 @@ love.load = function ()
 end
 
 x = 0
-r = 30
 y = 150
+r = 30
 current_color = {1, 1, 1}
+randomPositionx1 = math.random() * 500
+randomPositiony1 = math.random() * 500
+
 
 seconds = 0
 
 love.draw = function ()
-    love.graphics.print('This is a moving and growing circle', 50, 50)
-    local clock_display = 'seconds ' .. math.floor(seconds)
-    love.graphics.print(clock_display, 0, 0, 0, 2, 2)
-        if seconds > 5 then
-            love.graphics.print("You can also change it's color", 50, 75)
+    if seconds < 15 then 
+        love.graphics.print('This is a moving and growing circle', 50, 50)
+    end
+    -- local clock_display = 'seconds ' .. math.floor(seconds)
+    -- love.graphics.print(clock_display, 0, 0, 0, 2, 2)
+    if seconds > 5 and seconds < 15 then
+         love.graphics.print("You can also change it's color", 50, 75)
         end
+    if seconds > 17 and seconds < 30 then
+        love.graphics.print('Eat the small circles to grow bigger', 50, 50)
+    end
     love.graphics.setColor(current_color)
     love.graphics.circle('fill', x, y, r)
- 
-end
 
+-- Det lilla objektet som ska ätas
+    love.graphics.circle('line', randomPositionx1, randomPositiony1, 10)
+       
+end
 
 
 
@@ -39,7 +49,9 @@ love.keypressed = function (pressed_key)
 end
 
 love.update = function (dt)
-    r = r + dt
+ if x == randomPosition1 and y == randomPosition2 then
+         r = r + 100
+ end
     seconds = seconds + dt
     if love.keyboard.isDown('right') then
         x = x + 1
