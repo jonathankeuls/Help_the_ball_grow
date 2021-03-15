@@ -23,8 +23,16 @@ love.load = function ()
         if seconds > 17 and seconds < 30 then
             love.graphics.print('Eat the small circles to grow bigger', 50, 50)
         end
+
+        local sizeCounter = 'Your current size is ' .. r
+         if seconds > 30 then
+             love.graphics.print(sizeCounter, 0, 0, 0, 2, 2)
+        end
         love.graphics.setColor(current_color)
         love.graphics.circle('fill', x, y, r)
+
+     
+
     
     -- Det lilla objektet som ska ätas
         love.graphics.circle('line', randomPositionx1, randomPositiony1, 10)
