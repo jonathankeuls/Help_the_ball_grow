@@ -5,8 +5,10 @@ love.load = function ()
     y = 150
     r = 30
     current_color = {1, 1, 1}
-    randomPositionx1 = love.math.random() * 500
-    randomPositiony1 = love.math.random() * 500
+    foodPosition = {
+     foodX = love.math.random() * 500,
+     foodY = love.math.random() * 500
+    } 
     
     
     seconds = 0
@@ -35,7 +37,7 @@ love.load = function ()
 
     
     -- Det lilla objektet som ska ätas
-        love.graphics.circle('line', randomPositionx1, randomPositiony1, 10)
+        love.graphics.circle('line', foodPosition.foodX, foodPosition.foodY, 10)
            
     end
     
@@ -56,9 +58,15 @@ love.load = function ()
     end
     
     love.update = function (dt)
-     if x == randomPositionx1 and y == randomPositiony1 then
-             r = r + 100
+     if x == foodPosition.foodX and y == foodPosition.foodY then
+        r = r + 10
+        foodPosition = {
+            foodX = love.math.random() * 500,
+            foodY = love.math.random() * 500
+           }
      end
+    
+
         seconds = seconds + dt
         if love.keyboard.isDown('right') then
             x = x + 1
