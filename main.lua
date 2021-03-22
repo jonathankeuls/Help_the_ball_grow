@@ -63,13 +63,20 @@ love.load = function ()
     end
     
     love.update = function (dt)
-     if x == foodPosition.foodX and y == foodPosition.foodY then
-        r = r + 10
+    
+     dx = x - foodPosition.foodX;
+     dy = y - foodPosition.foodY;
+ distance = math.sqrt(dx * dx + dy * dy);
+
+if (distance < r + 10) then 
+    r = r + 10
+
         foodPosition = {
             foodX = love.math.random() * 500,
             foodY = love.math.random() * 500
            }
-     end
+end
+
     
 
         seconds = seconds + dt
