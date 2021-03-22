@@ -53,6 +53,11 @@ love.load = function ()
             current_color = {1, 0, 0}
         elseif pressed_key == 'y' then
             current_color = {1, 1, 0}
+        elseif pressed_key == 'p' then
+            current_color = {1, 0, 1}
+        elseif pressed_key == 'o' then
+            current_color = {1, 0.64705882352941, 0}
+
         
         end
     end
