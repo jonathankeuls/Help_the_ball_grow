@@ -76,9 +76,7 @@ if (distance < r + 10) then
             foodY = love.math.random() * 500
            }
 end
-
     
-
         seconds = seconds + dt
         if love.keyboard.isDown('right') then
             x = x + 1
@@ -90,9 +88,9 @@ end
             y = y + 1
         end
         --  funkar ej
-        if seconds == 10 then
+        if r == 200 then
             love.load()
-    end 
+        end 
     
     
     
