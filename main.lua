@@ -1,13 +1,16 @@
 love.load = function ()
     print('The game has been loaded')
 
+    width = love.graphics.getWidth()
+    height = love.graphics.getHeight()
+
     x = 0
     y = 150
     r = 30
     current_color = {1, 1, 1}
     foodPosition = {
-     foodX = love.math.random() * 500,
-     foodY = love.math.random() * 500
+     foodX = love.math.random() * width,
+     foodY = love.math.random() * height
     } 
     
     
@@ -65,18 +68,26 @@ love.load = function ()
         end
     end
     
+
+    restart = function()
+          love.load = function()
+            print('Hello', 50, 75)
+    end
+
+end
+
     love.update = function (dt)
     
      dx = x - foodPosition.foodX;
      dy = y - foodPosition.foodY;
- distance = math.sqrt(dx * dx + dy * dy);
+     distance = math.sqrt(dx * dx + dy * dy);
 
 if (distance < r + 10) then 
     r = r + 10
 
         foodPosition = {
-            foodX = love.math.random() * 500,
-            foodY = love.math.random() * 500
+            foodX = love.math.random() * width,
+            foodY = love.math.random() * height
            }
 end
     
@@ -91,8 +102,8 @@ end
             y = y + 1
         end
         
-      if r == 200 then
-         love.load()
+      if r == 50 then
+        restart()   
       end
     end
     

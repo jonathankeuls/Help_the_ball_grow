@@ -5,6 +5,6 @@ Man kan ändra färg genom att trycka på den första bokstaven för varje färg
 
 Att göra:
 - Man ska kunna äta de mindre bollarna för att få den stora att växa (KLAR)
-- Bestämma storlek för att vinna spelet 
+- Bestämma storlek för att vinna spelet (KLAR)
 - Ha en counter som visar nuvarande storlek (KLAR)
 - Tydligare instruktioner 
