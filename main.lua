@@ -69,12 +69,7 @@ love.load = function ()
     end
     
 
-    restart = function()
-          love.load = function()
-            print('Hello', 50, 75)
-    end
-
-end
+  
 
     love.update = function (dt)
     
@@ -102,9 +97,11 @@ end
             y = y + 1
         end
         
-      if r == 50 then
-        restart()   
+      
+      if r == 200 then
+        love.load()
       end
     end
-    
-end
+
+ end
+
