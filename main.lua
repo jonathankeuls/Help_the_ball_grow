@@ -20,19 +20,20 @@ love.load = function ()
         if seconds < 10 then 
             love.graphics.print('This is a moving circle', 50, 50)
         end
-        -- local clock_display = 'seconds ' .. math.floor(seconds)
-        -- love.graphics.print(clock_display, 0, 0, 0, 2, 2)
-        if seconds > 5 and seconds < 10 then
-             love.graphics.print("You can change it's color by pressing the first letter of each color", 50, 75)
+        if seconds > 5 and seconds < 10 then 
+            love.graphics.print("Use the arrow keys to move", 50, 75)
             end
-        if seconds > 14 and seconds < 20 then
+        if seconds > 10 and seconds < 16 then
+             love.graphics.print("You can change it's color by pressing the first letter of each color", 50, 50)
+            end
+        if seconds > 16 and seconds < 21 then
             love.graphics.print('Eat the small circles to grow bigger', 50, 50)
         end
         if seconds > 23 and seconds < 28 then
             love.graphics.print('Get to size 200 to win', 50, 50)
         end
         local sizeCounter = 'Your current size is ' .. r
-         if seconds > 28 then
+         if seconds > 27 then
              love.graphics.print(sizeCounter, 0, 0, 0, 2, 2)
         end
         
