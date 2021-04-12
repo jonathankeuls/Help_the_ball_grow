@@ -1,5 +1,5 @@
 Spelet går ut på att man ska äta upp de mindre bollarna för att bli större.
-Vid en storlek 200 vinner man.
+Vid storlek 200 vinner man.
 
 Man kan ändra färg genom att trycka på den första bokstaven för varje färg. T.ex. för att byta till blå så trycker du på tangenten b.
 
