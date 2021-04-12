@@ -23,7 +23,7 @@ love.load = function ()
         -- local clock_display = 'seconds ' .. math.floor(seconds)
         -- love.graphics.print(clock_display, 0, 0, 0, 2, 2)
         if seconds > 5 and seconds < 10 then
-             love.graphics.print("You can also change it's color by pressing the corresponding buttons", 50, 75)
+             love.graphics.print("You can change it's color by pressing the first letter of each color", 50, 75)
             end
         if seconds > 14 and seconds < 20 then
             love.graphics.print('Eat the small circles to grow bigger', 50, 50)
