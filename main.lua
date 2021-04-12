@@ -6,7 +6,7 @@ love.load = function ()
 
     x = 0
     y = 150
-    r = 30
+    r = 20
     current_color = {1, 1, 1}
     foodPosition = {
      foodX = love.math.random() * width,
